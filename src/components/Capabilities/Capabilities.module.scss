@@ -1,0 +1,18 @@
+img {
+  width: 40px;
+  height: 40px;
+}
+
+.Wrapper {
+  background: rgba(243, 246, 239, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 84px;
+  font-size: 24px;
+  color: rgba(47, 42, 55, 1);
+  margin: 50px;
+  box-shadow: 15px 10px 20px #00000057;
+}
