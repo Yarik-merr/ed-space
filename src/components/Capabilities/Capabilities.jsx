@@ -1,11 +1,10 @@
-import styles from './Capabilities.module.scss'
+import styles from './styles.module.scss'
 
-export const Capabilities = (props) => {
-  const { children, imgSrc } = props
+export const Capabilities = ({ children, imgSrc }) => {
   return (
     <div className={styles.Wrapper}>
-      <div>{children}</div>
-      <img src={`${imgSrc}`} alt="" />
+      {children}
+      <img src={imgSrc} alt="" />
     </div>
   )
 }
