@@ -1,28 +1,27 @@
 .card {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  flex-direction: column;
   cursor: pointer;
-  width: 330px;
-  height: 297px;
   padding: 50px;
   background: linear-gradient(
-    138.64deg,
+    338.64deg,
     #ffffff -21.71%,
     rgba(243, 247, 239, 0) 94.44%
   );
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.04);
-  margin: 27px;
+  margin: 25px;
   border-radius: 10px;
+
+
+
+  &__img {
+    width: fit-content;
+    margin-bottom: -4px;
+  }
 
   &:hover {
     box-shadow: 11px 6px 48px 4px rgba(54, 255, 159, 1);
-  }
-
-  &__title {
-    font-size: 30px;
-    font-weight: 500;
-  }
-
-  &__content {
-    margin-top: 31px;
-    font-size: 18px;
   }
 }

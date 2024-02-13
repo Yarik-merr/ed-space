@@ -1,76 +1,62 @@
+@import './globals';
+
+@mixin text-properties($font-size, $font-weight, $line-height, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}
+
 .text {
-  line-height: 130%;
-
-  &-logo {
-    font-size: 20px;
-    font-weight: 500;
+  &-t0w {
+    @include text-properties(14px, 500, 17px, var(--white));
   }
 
-  &-t1 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 31px;
+  &-t0g {
+    @include text-properties(14px, 500, 17px, var(--gray));
   }
 
-  &-t2 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 23px;
+  &-t0b {
+    @include text-properties(14px, 500, 17px, var(--black));
   }
 
-  &-t3 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
+  &-t1-400 {
+    @include text-properties(18px, 400, 22px, var(--black));
   }
 
-  &-t4 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
+  &-t1-500 {
+    @include text-properties(18px, 500, 22px, var(--black));
   }
 
-  &-t5 {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
+  &-t2g {
+    @include text-properties(20px, 400, 24px, var(--gray));
+  }
+
+  &-t3w {
+    @include text-properties(24px, 500, 28px, var(--white));
+  }
+
+  &-t3b {
+    @include text-properties(24px, 500, 28px, var(--black));
+  }
+
+  &-t3g {
+    @include text-properties(24px, 800, 28px, var(--green));
+  }
+
+  &-t4g {
+    @include text-properties(30px, 800, 36px, var(--green));
+  }
+
+  &-t5w {
+    @include text-properties(40px, 800, 46px, var(--white));
+  }
+
+  &-t5b{
+    @include text-properties(40px, 800, 46px, var(--black));
   }
 
   &-t6 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-  }
-
-  &-t7 {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
-  }
-
-  &-20_26 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 26px;
-  }
-
-  &-16_24 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-
-  &--ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  &--centered {
-    text-align: center;
-  }
-
-  &--white {
-    color: rgba(243, 246, 239, 1);
+    @include text-properties(54px, 800, 62px, var(--black));
   }
 }

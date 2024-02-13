@@ -82,16 +82,18 @@ export function Modal({ setOpenModal }) {
           />
           <label htmlFor="myCheckbox">
             <div>
-              <Text className={styles.modal__wrapper_checkbox_textT}>
-                Я согласен на обработку моих
-              </Text>
-              <Text className={styles.modal__wrapper_checkbox_textB}>
+              <Text size="t0g">Я согласен на обработку моих</Text>
+              <Text size="t0b" className={styles.modal__wrapper_checkbox_textB}>
                 персональных данных
               </Text>
             </div>
           </label>
         </div>
-        <Button className={styles.modal__wrapper_btn} onClick={handler}>
+        <Button
+          className={styles.modal__wrapper_btn}
+          onClick={handler}
+          ButtonGreen
+        >
           ОТПРАВИТЬ
         </Button>
       </div>
