@@ -1,26 +1,25 @@
-import { Button } from '../../ui-kit/Button/Button'
-import { Text } from '../../ui-kit/Text/Text'
+import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap'
 import styles from './styles.module.scss'
 
 export function Header() {
   return (
-    <div className={styles.Header}>
-      <img src="images/EdSpace_black.svg" alt="" />
-      <nav className={styles.Header__nav}>
-        <Button>
-          <Text size="t1-400">Возможности</Text>
-        </Button>
-        <Button>
-          <Text size="t1-400">Стоимость</Text>
-        </Button>
-        <Button>
-          <Text size="t1-400">Контакты</Text>
-        </Button>
-      </nav>
-      <Button className={styles.Header__btn}>
-        <Text size="t1-500">RU</Text>
-        <img src="images/arrow.svg" alt="" />
-      </Button>
-    </div>
+    <Navbar expand="lg" className="bg-body-tertiary shadow">
+      <Container className={styles.Wrapper}>
+        <Navbar.Brand href="#home">
+          <Image src="images/EdSpace_black.svg" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" className={styles.Wrapper__word1}>Возможность</Nav.Link>
+            <Nav.Link href="#link" className={styles.Wrapper__word2}>Стоимость</Nav.Link>
+            <Nav.Link href="#contacts" className={styles.Wrapper__word3}>Контакты</Nav.Link>
+            <NavDropdown title="RU" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">EN</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }

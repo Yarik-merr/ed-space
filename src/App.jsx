@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card } from './components/Card/Card'
+import { Cards } from './components/Cards/Cards'
 import { Text } from './ui-kit/Text/Text'
 import { Button } from './ui-kit/Button/Button'
 import { Modal } from './components/Modal/Modal'
@@ -89,9 +89,7 @@ const App = () => {
           Поможем перенести корпоративную академию, базу знаний, учебные курсы,
           настроим систему мотивации обучения, круглосуточная поддержка.
         </Text>
-        <div className="section-3__card">
-          <Card />
-        </div>
+        <Cards />
         <Button className="section-3__btn" onClick={setOpenModal} ButtonGreen>
           <Text size="t0b">ПОПРОБОВАТЬ БЕСПЛАТНО</Text>
         </Button>

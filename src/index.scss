@@ -5,6 +5,12 @@ body {
   font-family: 'Maven Pro', sans-serif;
 }
 
+*,
+::after,
+::before {
+  box-sizing: inherit !important;
+}
+
 .section-1 {
   position: relative;
   padding: 126px 130px;
@@ -32,7 +38,7 @@ body {
 
   &__btn {
     position: absolute;
-    bottom: 197px;
+    bottom: 137px;
   }
 
   &-l {
@@ -71,10 +77,10 @@ body {
   background-image: url('../public/images/backgroundSection3.jpg');
   background-position: center;
 
-  &__card {
-    display: grid;
-    grid-template-columns: repeat(3, calc(100% - 68%));
-  }
+  // &__card {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, calc(100% - 68%));
+  // }
 
   &__title {
     margin-top: 82px;

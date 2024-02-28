@@ -1,0 +1,17 @@
+.Cards {
+  cursor: pointer;
+  background: linear-gradient(
+    338.64deg,
+    #ffffff -21.71%,
+    rgba(243, 247, 239, 0) 94.44%
+  );
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  border: none;
+  flex: 0;
+  height: 270px;
+}
+
+.Wrap {
+  gap: 80px;
+}
