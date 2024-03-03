@@ -5,8 +5,9 @@ import { Button } from '../../ui-kit/Button/Button'
 import { Modal } from '../Modal/Modal'
 import { useState } from 'react'
 
-export function Slider() {
+export function Slider({ sent }) {
   const [openModal, setOpenModal] = useState(false)
+  const [dataSent, setDataSent] = useState(false)
 
   return (
     <div>
@@ -18,13 +19,20 @@ export function Slider() {
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </Carousel.Caption>
-            <Button ButtonGreen className={styles.Slider__btn} onClick={setOpenModal}>
+            <Button
+              ButtonGreen
+              disabled={dataSent || sent}
+              className={styles.Slider__btn}
+              onClick={setOpenModal}
+            >
               ПОПРОБОВАТЬ БЕСПЛАТНО
             </Button>
           </Carousel.Item>
         ))}
       </Carousel>
-      {openModal && <Modal setOpenModal={setOpenModal} />}
+      {openModal && (
+        <Modal setOpenModal={setOpenModal} setDataSent={setDataSent} />
+      )}
     </div>
   )
 }

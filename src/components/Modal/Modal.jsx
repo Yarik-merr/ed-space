@@ -3,7 +3,7 @@ import { Button } from '../../ui-kit/Button/Button'
 import { Text } from '../../ui-kit/Text/Text'
 import styles from './styles.module.scss'
 
-export function Modal({ setOpenModal }) {
+export function Modal({ setOpenModal, setDataSent = false }) {
   const [name, setName] = useState('')
   const [nameJob, setNameJob] = useState('')
   const [post, setPost] = useState('')
@@ -29,6 +29,7 @@ export function Modal({ setOpenModal }) {
         tel,
       }
       console.log(data)
+      setDataSent(true)
       closeHandler()
     }
   }

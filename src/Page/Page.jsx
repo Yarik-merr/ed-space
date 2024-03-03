@@ -18,7 +18,7 @@ export const Page = () => {
     <div>
       <section>
         <Header />
-        <Slider />
+        <Slider sent={dataSent}/>
       </section>
       <section className="section-2">
         <div className="section-2__content">
@@ -40,7 +40,7 @@ export const Page = () => {
           настроим систему мотивации обучения, круглосуточная поддержка.
         </Text>
         <Cards />
-        <Button className="section-3__btn" onClick={setOpenModal} ButtonGreen>
+        <Button className="section-3__btn" onClick={setOpenModal} disabled={dataSent} ButtonGreen>
           <Text size="t0b">ПОПРОБОВАТЬ БЕСПЛАТНО</Text>
         </Button>
       </section>
