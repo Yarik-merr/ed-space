@@ -1,0 +1,16 @@
+.SuitableInfo {
+  display: flex;
+  gap: 217px;
+
+  &__card {
+    display: flex;
+    gap: 31px;
+
+    &__content {
+      width: 326px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}

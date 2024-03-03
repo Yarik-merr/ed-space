@@ -1,4 +1,7 @@
 .Cards {
+  width: 18rem;
+  padding: 40px 50px;
+  align-items: start;
   cursor: pointer;
   background: linear-gradient(
     338.64deg,
@@ -10,6 +13,12 @@
   border: none;
   flex: 0;
   height: 270px;
+
+  &:hover {
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.04);
+
+    box-shadow: 11px 6px 48px 4px rgba(54, 255, 159, 1);
+  }
 }
 
 .Wrap {

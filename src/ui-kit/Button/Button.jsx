@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { Text } from '../Text/Text'
 import styles from './styles.module.scss'
 
 export const Button = ({
@@ -7,13 +6,16 @@ export const Button = ({
   children,
   onClick,
   ButtonGreen = false,
+  disabled = false,
 }) => {
   return (
     <button
       className={clsx(styles.Button, className, {
-        [styles['Button--green']]: ButtonGreen,
+        [styles['Button--green']]: ButtonGreen && !disabled,
+        [styles['Button--disabled']]: disabled,
       })}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

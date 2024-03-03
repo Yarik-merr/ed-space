@@ -9,34 +9,40 @@ export function Modal({ setOpenModal }) {
   const [post, setPost] = useState('')
   const [email, setEmail] = useState('')
   const [tel, setTel] = useState('')
+  const [activeButton, setActiveButton] = useState(false)
 
   const closeHandler = () => {
     setOpenModal(false)
   }
 
-  const handler = (e) => {
-    const data = {
-      name,
-      nameJob,
-      post,
-      email,
-      tel,
-    }
-    console.log(data)
+  const activeHandler = () => {
+    setActiveButton(true)
+  }
 
-    closeHandler()
+  const handler = (e) => {
+    if (activeButton && name && nameJob && post && email && tel) {
+      const data = {
+        name,
+        nameJob,
+        post,
+        email,
+        tel,
+      }
+      console.log(data)
+      closeHandler()
+    }
   }
 
   return (
     <div className={styles.modal}>
       <div className={styles.modal__wrapper}>
         <img
-          src="images/EdSpace.svg"
+          src="/images/EdSpace.svg"
           alt=""
           className={styles.modal__wrapper_img}
         />
         <img
-          src="images/cancel.svg"
+          src="/images/cancel.svg"
           alt=""
           className={styles.modal__wrapper_cancel}
           onClick={closeHandler}
@@ -79,6 +85,8 @@ export function Modal({ setOpenModal }) {
             id="myCheckbox"
             type="checkbox"
             className={styles.modal__wrapper_checkbox_btn}
+            value={activeButton}
+            onClick={activeHandler}
           />
           <label htmlFor="myCheckbox">
             <div>

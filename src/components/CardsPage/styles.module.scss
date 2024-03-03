@@ -1,0 +1,14 @@
+.CardsPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+
+  &__card {
+    flex: 1;
+    padding: 20px;
+    font-size: 30px;
+    background-color: var(--gray);
+    color: var(--green);
+  }
+}
