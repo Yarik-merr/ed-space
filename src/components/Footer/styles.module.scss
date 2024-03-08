@@ -1,62 +1,55 @@
-.Wrap {
-  margin-top: 100px;
-}
+.wrapper {
+  padding-top: 20px;
 
-.Footer {
-  height: 229px;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  gap: 276px;
-
-  & > img {
-    position: relative;
-    bottom: 70px;
-  }
-
-  &__content {
-    position: relative;
-    bottom: 70px;
+  &__footer {
+    height: 229px;
     display: flex;
-    gap: 100px;
     align-items: start;
+    justify-content: center;
+    gap: 276px;
 
-    &__menu {
+    &__content {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      gap: 100px;
+      align-items: start;
 
-      &_sub {
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &__docs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &_text {
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
     }
-
-    &__docs {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    &__contacts {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
   }
-}
 
-.SubFooter {
-  display: flex;
-  align-items: center;
-  height: 74px;
-  gap: 500px;
-  background-color: var(--green);
-  justify-content: space-around;
-
-  & > div {
+  &__subFooter {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    height: 74px;
+    gap: 500px;
+    background-color: var(--green);
+    justify-content: space-around;
+
+    & > div {
+      display: flex;
+      gap: 30px;
+    }
   }
 }

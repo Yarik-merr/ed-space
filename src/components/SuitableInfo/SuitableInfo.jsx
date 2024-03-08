@@ -18,11 +18,11 @@ const IMG_ARR = [
 
 export function SuitableInfo() {
   return (
-    <div className={styles.SuitableInfo}>
+    <div className={styles.suitableInfo}>
       {IMG_ARR.map((item, i) => (
-        <div key={i} className={styles.SuitableInfo__card}>
+        <div key={i} className={styles.suitableInfo__card}>
           <img src={item.img} alt="" />
-          <div className={styles.SuitableInfo__card__content}>
+          <div className={styles.suitableInfo__card__content}>
             <Text size="t3w">{item.title}</Text>
             <Text size="t0w">{item.subtitle}</Text>
           </div>

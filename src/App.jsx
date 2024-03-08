@@ -1,17 +1,15 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
 
-import { CardsPage } from './components/CardsPage/CardsPage'
-import { Page } from './Page/Page'
+import { CardsPage } from './Pages/CardsPage/CardsPage'
+import { Pages } from './Pages/Pages'
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Page />} />
-        <Route path="/card/:id" element={<CardsPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Pages />} />
+      <Route path="/card/:id" element={<CardsPage />} />
+    </Routes>
   )
 }
 

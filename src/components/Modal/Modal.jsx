@@ -3,7 +3,7 @@ import { Button } from '../../ui-kit/Button/Button'
 import { Text } from '../../ui-kit/Text/Text'
 import styles from './styles.module.scss'
 
-export function Modal({ setOpenModal, setDataSent = false }) {
+export function Modal({ setOpenModal, setDataSend = false }) {
   const [name, setName] = useState('')
   const [nameJob, setNameJob] = useState('')
   const [post, setPost] = useState('')
@@ -29,7 +29,7 @@ export function Modal({ setOpenModal, setDataSent = false }) {
         tel,
       }
       console.log(data)
-      setDataSent(true)
+      setDataSend(true)
       closeHandler()
     }
   }
@@ -43,15 +43,15 @@ export function Modal({ setOpenModal, setDataSent = false }) {
           className={styles.modal__wrapper_img}
         />
         <img
-          src="/images/cancel.svg"
+          src="/images/x-lg.svg"
           alt=""
           className={styles.modal__wrapper_cancel}
           onClick={closeHandler}
         />
 
-        <label htmlFor="" className={styles.modal__wrapper_form}>
+        <label className={styles.modal__wrapper_form}>
           <input
-            type="text"
+            type=""
             onChange={(e) => setName(e.target.value)}
             value={name}
             placeholder="Имя Фамилия"
@@ -70,12 +70,14 @@ export function Modal({ setOpenModal, setDataSent = false }) {
           />
           <input
             type="email"
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="Email"
           />
           <input
             type="tel"
+            name='tel'
             onChange={(e) => setTel(e.target.value)}
             value={tel}
             placeholder="Телефон"

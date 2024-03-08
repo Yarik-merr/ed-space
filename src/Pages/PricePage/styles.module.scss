@@ -1,0 +1,64 @@
+@mixin dFlex($margin, $gap) {
+  display: flex;
+  flex-direction: column;
+  margin: $margin;
+  gap: $gap;
+}
+
+.pricePage {
+  position: relative;
+  height: 211vh;
+  width: 200vh;
+  padding-top: 80px;
+
+  &__capabilities {
+    @include dFlex(100px 0px 0px 0px, 27px);
+
+    & > div {
+      display: flex;
+      gap: 26px;
+    }
+  }
+
+  &__block_one {
+    position: relative;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > div:first-child {
+      width: 35%;
+      text-align: center;
+    }
+  }
+
+  &__block_two {
+    @include dFlex(100px 0px 89px 170px, 50px);
+  }
+
+  &__block_three {
+    @include dFlex(0px 0px 0px 170px, 50px);
+    width: 30%;
+
+    & > div {
+      @include dFlex(0px, 19px);
+    }
+
+    & > img {
+      position: absolute;
+      left: 790px;
+    }
+  }
+
+  &__bg {
+    z-index: -999;
+    position: absolute;
+    height: 100%;
+    bottom: 72px;
+    right: 100px;
+    width: 100%;
+    background-image: url('../../../public/images/bg2_wo_title.png');
+    background-position: center;
+  }
+}

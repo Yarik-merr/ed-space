@@ -1,14 +1,11 @@
-.Wrapper {
-  margin-left: 130px;
+.header {
+  margin-left: 90px;
 
-  &__word1 {
-    margin-left: 335px;
-  }
-
-  &__word2 {
-    margin: 0px 50px;
-  }
-  &__word3 {
-    margin-right: 354px;
+  &__nav {
+    & > div {
+      display: flex;
+      gap: 30px;
+      margin-left: 400px;
+    }
   }
 }

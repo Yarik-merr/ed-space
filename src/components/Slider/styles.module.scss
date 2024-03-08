@@ -1,4 +1,4 @@
-.Slider {
+.slider {
   height: 100vh;
   background-color: white;
 
@@ -9,31 +9,16 @@
   }
 
   &__text {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 31px;
-    position: relative;
     top: 100px;
     left: 100px;
     width: 40%;
     text-align: start;
-    h3 {
-      color: rgba(47, 42, 55, 1);
-      font-weight: 800;
-      font-size: 50px;
-    }
-
-    p {
-      color: rgba(110, 108, 114, 1);
-      font-weight: 400;
-      font-size: 20px;
-    }
   }
   &__btn {
-    position: relative;
-    left: 100px;
-    top: 150px;
+    margin-top: 50px;
   }
 }
-
-

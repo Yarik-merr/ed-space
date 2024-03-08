@@ -6,37 +6,14 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 *,
 ::after,
 ::before {
   box-sizing: inherit;
-}
-
-.section-3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 140vh;
-  padding: 50px 130px;
-  background-image: url('../public/images/backgroundSection3.jpg');
-  background-position: center;
-
-  &__title {
-    margin-top: 82px;
-    margin-bottom: 23px;
-  }
-
-  &__subtitle {
-    width: 776px;
-    margin-bottom: 84px;
-    text-align: center;
-  }
-
-  &__btn {
-    z-index: 1;
-    margin-top: 84px;
-    -bottom: 30px;
-  }
 }
 
 .carousel-control-next,
@@ -59,91 +36,10 @@ body {
   margin-bottom: 60px;
 }
 
-.section-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 112px;
-  height: 420px;
-  padding: 79px 153px;
-  background-color: rgba(36, 32, 41, 1);
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 82px;
-  }
+.dropdown-item {
+  width: fit-content;
 }
 
-.section-4 {
-  position: relative;
-
-  height: 211vh;
-  width: 200vh;
-
-  &__block-one {
-    padding-top: 100px;
-    position: relative;
-    right: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__block-two {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 100px;
-    margin-left: 170px;
-    margin-bottom: 89px;
-  }
-
-  &__block-three {
-    width: 30%;
-    position: relative;
-    margin-left: 170px;
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      gap: 19px;
-    }
-
-    & > img {
-      position: absolute;
-      left: 590px;
-    }
-  }
-
-  &__bg {
-    z-index: -999;
-    position: absolute;
-    height: 100%;
-    bottom: 72px;
-    right: 100px;
-    width: 100%;
-    background-image: url('../public/images/bg2_wo_title.png');
-    background-position: 100%;
-  }
-
-  &__Text {
-    width: 35%;
-    text-align: center;
-  }
-
-  &__capabilities {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-
-    & > div {
-      display: flex;
-      gap: 26px;
-    }
-  }
+.dropdown-menu {
+  --bs-dropdown-min-width: fit-content;
 }

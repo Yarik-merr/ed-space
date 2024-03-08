@@ -1,24 +1,35 @@
 import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 import styles from './styles.module.scss'
+
+const menuItems = [
+  ['Capabilities', 'Возможности'],
+  ['Price', 'Стоимость'],
+  ['Contacts', 'Контакты'],
+]
 
 export function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary shadow">
-      <Container className={styles.Wrapper}>
+    <Navbar expand="lg" className="bg-body-tertiary shadow" id="Home">
+      <Container className={styles.header}>
         <Navbar.Brand href="#home">
           <Image src="/images/EdSpace_black.svg" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home" className={styles.Wrapper__word1}>Возможности</Nav.Link>
-            <Nav.Link href="#link" className={styles.Wrapper__word2}>Стоимость</Nav.Link>
-            <Nav.Link href="#contacts" className={styles.Wrapper__word3}>Контакты</Nav.Link>
-            <NavDropdown title="RU" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">EN</NavDropdown.Item>
-            </NavDropdown>
+          <Nav className={styles.header__nav}>
+            <div>
+              {menuItems.map((item, key) => (
+                <AnchorLink href={`#${item[0]}`} key={key}>
+                  <Nav.Link>{item[1]}</Nav.Link>
+                </AnchorLink>
+              ))}
+            </div>
           </Nav>
         </Navbar.Collapse>
+        <NavDropdown title="RU" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">EN</NavDropdown.Item>
+        </NavDropdown>
       </Container>
     </Navbar>
   )
